@@ -1,0 +1,58 @@
+---
+title: Obsidian
+description: Theming Obsidian with Kyo
+sidebar:
+  order: 10
+---
+Applies Kyo's generated color palette to [Obsidian](https://obsidian.md/) as a CSS snippet. Both dark and light mode variants are generated, and Obsidian will use whichever matches its current appearance setting.
+## Requirements:
+
+- `obsidian.css` provided [here](https://github.com/kyo-dev/community-templates/blob/main/obsidian/obsidian.css)
+
+## Setup:
+1. **Download `obsidian.css` from the Obsidian community-templates [Github](https://github.com/kyo-dev/community-templates/blob/main/obsidian/obsidian.css) page.**
+
+2. **Enable User Templates in Kyo:**
+	- **Settings → Templates → Toggle Enable User Templates ON → Toggle obsidian (editor) ON**
+
+3. **Set up Obsidian files**
+	- Open a terminal and navigate to `.config/kyo`. Create a file named `obsidian.toml`
+	```shell 
+	cd ~/.config/kyo 
+	touch obsidian.toml
+	```
+	- While we're inside `/.config/kyo`, create a new folder named 'Obsidian', then open the folder we just created and paste the `obsidian.css` file that we downloaded in Step 1. 
+	```shell
+	mkdir Obsidian
+	cd Obsidian
+	cp ~/Downloads/obsidian.css ~/.config/kyo/Obsidian
+	```
+
+4. **Set up Kyo files**
+	- Navigate to wherever your Obsidian Vault is located, and create a folder called `snippets`. Create a file inside the `/snippets` folder named `kyo.css`. The command `touch` creates empty files, `mkdir` makes folders.
+	```shell 
+	mkdir ~/Documents/vault/.obsidian/snippets
+	cd snippets
+	touch kyo.css
+	```
+
+5. **Open the `obsidian.toml` file that we created in Step 3. Copy and paste the following, substituting your local paths:**
+	```toml
+	[theme.templates.user.obsidian_extra]
+	input_path = "/home/$USER/.config/kyo/Obsidian/obsidian.css"
+	output_path = "/home/$USER/Documents/vault/.obsidian/snippets/kyo.css"
+	```
+	- `input_path` should point to the `obsidian.css` file that we downloaded earlier which should be in `.config/kyo/Obsidian`, and `output_path` should point to the `kyo.css` file we made previously in your vault folder. The `obsidian.css` file tells `kyo.css` what colors to generate when Obsidian hot-reloads.
+
+6. **Enable CSS snippet in Obsidian**
+	- Open `Settings → Appearance`
+		- Ensure "Base Color Scheme" is set to "Adapt to system"
+		- Toggle "CSS Snippets" should now populate a button, toggle it **ON**
+
+## How it works:
+This template renders a CSS snippet (`kyo.css`) into your Obsidian vault's `snippets/` directory. The snippet overrides Obsidian's CSS custom properties to match Kyo's active palette: backgrounds, text, accents, headings, links, tags, graph view, and more. 
+
+## Notes:
+- The snippet layers on top of any installed Obsidian theme - it overrides color variables without removing your base theme.
+- Obsidian hot-reloads CSS snippets from disk on most platforms. If colors don't update after a wallpaper change, toggle the snippet off/on in Obsidian's `Settings → Appearance → CSS Snippets`
+- 'How it works' section and general description pulled from the original community template [README](https://github.com/kyo-dev/community-templates/blob/main/obsidian/README.md).

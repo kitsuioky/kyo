@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Kyo
+Comment=A sleek, customizable desktop shell crafted for Wayland.
+Exec=kyo --daemon
+Icon=kyo
+Terminal=false
+Categories=Settings;DesktopSettings;
+StartupNotify=false
+Actions=Settings;
+Keywords=desktop;shell;wayland;
+
+[Desktop Action Settings]
+Name=Open Settings
+Exec=sh -c "kyo msg settings-open || { kyo --daemon && kyo msg settings-open; }"

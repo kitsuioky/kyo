@@ -1,0 +1,44 @@
+---
+title: Running Kyo
+description: This page gives you a basic example on how to run the shell.
+sidebar:
+  order: 3
+---
+
+:::tip[Method]
+Use compositor autostart as the primary method.
+:::
+### Autostart by your Wayland compositor
+This is the recommended method for launching kyo, as it integrates with your window manager.
+
+For the *Niri* compositor, add the following line to the end of your configuration file, typically located at `~/.config/niri/config.kdl`
+```ini
+spawn-at-startup "kyo"
+```
+
+For the *Hyprland* compositor, append this to your existing `hyprland.start` event hook in your Lua configuration file, typically located at `~/.config/hypr/hyprland.lua`
+```lua
+hl.on("hyprland.start", function()
+  hl.exec_cmd("kyo")
+end)
+```
+
+If your compositor expects startup commands to return after the shell has initialized, run Kyo in daemon mode:
+```bash
+kyo --daemon
+```
+Daemon mode returns after the shell has initialized. The optional polkit authentication agent starts asynchronously after the UI is up.
+
+---
+
+### Manual Launch for Debugging
+The most direct way to run Kyo for testing or debugging. Open a terminal and execute:
+```bash
+kyo
+```
+
+### Logs
+Kyo writes its main log to `$XDG_CACHE_HOME/kyo/kyo.log`. If
+`XDG_CACHE_HOME` is unset, the fallback path is
+`~/.cache/kyo/kyo.log`. The previous file is retained as
+`kyo.log.1` when the current log reaches 1 MiB.
