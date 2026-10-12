@@ -1,150 +1,152 @@
-# Kyo
+<p align="center">
+  <img src="assets/kyo.svg" alt="Logo do Kyo" width="140" />
+</p>
 
-Kyo is a native Wayland desktop shell for people who want a polished, configurable Linux desktop without stitching
-together a separate bar, launcher, notification daemon, lock screen, wallpaper tool, and settings UI.
-
-It provides the shell layer around your compositor: bars, widgets, dock, launcher, control center, notifications,
-wallpaper, lock screen, session actions, clipboard history, OSDs, tray integration, and desktop widgets. The project is
-built directly on Wayland and OpenGL ES with no Qt or GTK dependency, so the UI, rendering, configuration, and IPC model
-are designed as one cohesive shell instead of a collection of unrelated panels and scripts.
-
-<p><br/></p>
+<h1 align="center">Kyo</h1>
 
 <p align="center">
-  <img src="https://assets.kyo.dev/kyo-logo.svg?v=2" alt="Kyo Logo" style="width: 192px" />
+  <i>o Noctalia com a minha cara</i>
 </p>
 
 <p align="center">
-  <a href="https://docs.kyo.dev/kyo/getting-started/installation/">
-    <img
-      src="https://img.shields.io/badge/Install_Kyo-FFF59B?style=for-the-badge&labelColor=FFF59B"
-      alt="Install Kyo"
-      style="height: 50px"
-    />
-  </a>
+  <img src="https://img.shields.io/badge/fork_do-Noctalia-FA0050?style=flat-square&labelColor=121214" alt="Fork do Noctalia" />
+  <img src="https://img.shields.io/badge/feito_para-Debian-FF7A9E?style=flat-square&labelColor=121214" alt="Feito para Debian" />
+  <img src="https://img.shields.io/badge/projeto-pessoal-B794F6?style=flat-square&labelColor=121214" alt="Projeto pessoal" />
+  <img src="https://img.shields.io/badge/suporte-nenhum-D12323?style=flat-square&labelColor=121214" alt="Sem suporte" />
 </p>
 
-<p><br/></p>
+---
 
-<p align="center">
-  <a href="https://github.com/kyo-dev/kyo/commits">
-    <img src="https://img.shields.io/github/last-commit/kyo-dev/kyo?style=for-the-badge&labelColor=FFF59B&color=FFF59B&logo=git&logoColor=070722&label=commit" alt="Last commit" />
-  </a>
-  <a href="https://github.com/kyo-dev/kyo/stargazers">
-    <img src="https://img.shields.io/github/stars/kyo-dev/kyo?style=for-the-badge&labelColor=FFF59B&color=FFF59B&logo=github&logoColor=070722" alt="GitHub stars" />
-  </a>
-  <a href="https://docs.kyo.dev">
-    <img src="https://img.shields.io/badge/docs-FFF59B?style=for-the-badge&logo=gitbook&logoColor=070722&labelColor=FFF59B" alt="Documentation" />
-  </a>
-  <a href="https://discord.kyo.dev">
-    <img src="https://img.shields.io/badge/discord-FFF59B?style=for-the-badge&labelColor=FFF59B&logo=discord&logoColor=070722" alt="Discord" />
-  </a>
-</p>
+## Sobre
 
-## Why Kyo?
+O Kyo é um fork do [Noctalia](https://github.com/noctalia-dev/noctalia), um shell nativo para Wayland que já traz
+barra, dock, launcher, central de controle, notificações, lock screen e widgets num pacote só.
 
-Most Wayland setups leave the desktop shell to a stack of small tools: one bar, another launcher, another notification
-daemon, a lock screen, a wallpaper daemon, scripts for session actions, and separate config formats for each piece. That
-can be flexible, but it also makes a complete desktop feel fragile and hard to keep visually consistent.
+Eu mexi **só no visual**: troquei o nome e o logo e criei paletas de cores novas. Por baixo é o Noctalia de sempre,
+sem funcionalidade nova e sem mudança de arquitetura. Todo o mérito do trabalho de verdade é do pessoal do projeto
+original.
 
-Kyo solves that by providing one configurable shell layer that owns the common desktop surfaces and services while
-still fitting into compositor-driven Wayland workflows. It is meant for users who want the control of a custom desktop
-environment with fewer moving parts and a consistent UI.
+## Por que isso existe?
 
-To understand the values and philosophy guiding the project, read our [ethos](https://kyo.dev/ethos).
+Esse repositório **não é um projeto sério**. Eu uso Debian e queria um lugar meu, num repositório meu, de onde eu
+pudesse baixar e instalar o shell do jeito que eu gosto, sem precisar refazer tudo a cada instalação. Se ele servir
+pra mais alguém, ótimo, mas foi feito pensando em mim.
 
-## What It Includes
+## Paletas
 
-- Multi-monitor bars with configurable widgets, taskbar, workspaces, system tray, media, network, battery, brightness,
-  weather, clipboard, and custom script-backed widgets.
-- Dock, launcher, control center, notification toasts/history, wallpaper picker, OSD overlays, lock screen, session
-  panel, and desktop widgets.
-- TOML configuration with hot reload, GUI-managed overrides, theme/palette support, template application, and IPC for
-  runtime control.
-- Direct Wayland integration for layer-shell, session lock, idle behavior, clipboard, foreign toplevels, workspaces,
-  fractional scaling, and compositor-specific workspace backends where needed.
+Todas têm versão escura e clara. A **Kyo** é a padrão. Abaixo, as cores da versão escura (primária, secundária,
+terciária e erro):
 
-## Wayland Compositor Support
+| Paleta        | Primária | Secundária | Terciária | Erro |
+| ------------- | :------: | :--------: | :-------: | :--: |
+| **Kyo**       | ![](https://img.shields.io/badge/-FA0050-FA0050?style=flat-square) | ![](https://img.shields.io/badge/-FF7A9E-FF7A9E?style=flat-square) | ![](https://img.shields.io/badge/-FF9B6A-FF9B6A?style=flat-square) | ![](https://img.shields.io/badge/-D12323-D12323?style=flat-square) |
+| **Butterfly** | ![](https://img.shields.io/badge/-B794F6-B794F6?style=flat-square) | ![](https://img.shields.io/badge/-E9A5F5-E9A5F5?style=flat-square) | ![](https://img.shields.io/badge/-8FD0FF-8FD0FF?style=flat-square) | ![](https://img.shields.io/badge/-D12323-D12323?style=flat-square) |
+| **Yagami**    | ![](https://img.shields.io/badge/-BD3DFF-BD3DFF?style=flat-square) | ![](https://img.shields.io/badge/-00F0FF-00F0FF?style=flat-square) | ![](https://img.shields.io/badge/-FCEE0A-FCEE0A?style=flat-square) | ![](https://img.shields.io/badge/-FF1F4B-FF1F4B?style=flat-square) |
+| **Cyberpunk** | ![](https://img.shields.io/badge/-FC0034-FC0034?style=flat-square) | ![](https://img.shields.io/badge/-2EE6E0-2EE6E0?style=flat-square) | ![](https://img.shields.io/badge/-B07CFF-B07CFF?style=flat-square) | ![](https://img.shields.io/badge/-D12323-D12323?style=flat-square) |
 
-Kyo supports Wayland compositors that provide the layer-shell protocols it needs for shell surfaces. Workspace
-integration works through compositor-native backends where needed, or through `ext-workspace-v1` on compositors that
-implement it.
+- **Kyo:** rosa forte sobre cinza escuro.
+- **Butterfly:** violeta suave, com rosa e azul claro.
+- **Yagami:** roxo escuro com ciano e amarelo neon.
+- **Cyberpunk:** vermelho, ciano e roxo sobre um fundo arroxeado.
 
-Current compositor integrations include Niri, Hyprland, Sway, Scroll, Mango, Labwc, dwl, and other compatible
-Wayland compositors. Other compositors may run Kyo but can have reduced workspace, window, output, or
-session-action integration depending on the protocols and IPC they expose.
+Nas paletas novas a cor de erro é sempre vermelha. As paletas do Noctalia (Ayu, Catppuccin, Dracula, Eldritch,
+Gruvbox, Kanagawa, Nord, Rosé Pine e Tokyo-Night) continuam disponíveis. Os detalhes técnicos das mudanças estão em
+[MUDANCAS-KYO.md](MUDANCAS-KYO.md).
 
-## Scope
+## Instalação
 
-Kyo is a desktop shell, not a full desktop environment. It provides the visual and service layer around your
-Wayland compositor: bars, panels, launcher, notifications, dock, lock screen, idle behavior, OSDs, theming, wallpapers,
-desktop widgets, and multi-monitor shell surfaces.
+> **Nota:** a instalação "oficial" deste projeto é feita por um **script separado, que mora em outro repositório
+> meu**: [`NOME-DO-REPOSITORIO`](https://github.com/kitsuioky/NOME-DO-REPOSITORIO). Ele é pensado pro Debian e
+> pergunta se você quer instalar o **Kyo** (este repositório) ou o **Noctalia original**. Ele é a forma recomendada
+> de instalar, mas o script não faz parte deste repositório.
 
-Window management, tiling, compositor configuration such as monitor arrangement and positions, file management,
-removable-drive mounting, printers management, and screen mirroring/casting belong to the compositor, dedicated desktop
-applications, or system services.
+Se preferir compilar na mão, clone o repositório e use o `just`. As dependências estão na seção
+[Contribuindo e dependências](#contribuindo-e-dependências-debian):
 
-Display/login greeter support lives in the separate [Kyo Greeter](https://github.com/kyo-dev/kyo-greeter)
-project. Kyo may integrate with those pieces when useful, but it does not replace them.
+```sh
+git clone https://github.com/kitsuioky/kyo.git
+cd kyo
 
-Core Kyo is non-invasive: it does not manage your compositor settings or take over your dotfiles. Compositor-specific
-controls can be provided as opt-in plugins rather than becoming core shell behavior.
+just configure release   # configura o build
+just build release       # compila
+sudo just install release
+```
 
-The plugin system is available for user-installed extensions. Features that are useful to some users but not essential
-to the core shell can live there: extra bar widgets, launcher providers, desktop widgets, panels, shortcuts, background
-services, compositor-specific extras and controls, hardware-specific controls, and third-party service integrations.
+Para instalar na sua home, sem sudo, passe um prefixo: `just configure release "$HOME/.local"`.
+Para remover: `sudo just uninstall release`.
 
-## Build from source
+Depois é só iniciar com o comando `kyo`. Você também precisa de um compositor Wayland rodando (Sway, Niri,
+Hyprland...). Sem gerenciador de login, dá pra iniciar o compositor direto do TTY.
 
-Source dependencies, distro-specific package commands, build modes, and install layouts live in
-[BUILDING.md](BUILDING.md).
+### Trocando o Noctalia pelo Kyo
 
-## Configuration
+O Kyo instala o binário `kyo` e usa `~/.config/kyo`, então não sobrescreve nada do Noctalia. Mas os dois não devem
+rodar juntos:
 
-A ready-to-use starting config with all defaults is at [example.toml](example.toml). The full configuration reference
-lives in the [documentation site](https://docs.kyo.dev/kyo/). The source MDX files are in
-[`docs/user/`](docs/user/); sync them to a local docs checkout with `tools/sync-docs.sh`.
+1. Pare o Noctalia.
+2. No config do seu compositor, troque o comando que inicia o Noctalia por `kyo`.
+3. Se quiser, desinstale o Noctalia do mesmo jeito que você instalou.
 
-## Contributing
+A configuração antiga não é migrada, então o Kyo começa com um `~/.config/kyo` limpo.
 
-Developer notes, code style, contribution rules, testing, project layout, and debugging commands live in
-[CONTRIBUTING.md](CONTRIBUTING.md). The architecture and its invariants are described in
-[ARCHITECTURE.md](ARCHITECTURE.md).
+### Greeter
 
-Bug reports, fixes, documentation updates, themes, and configuration examples are welcome. For general help and design
-discussion, join the community on [Discord](https://discord.kyo.dev).
+O Kyo não instala nem compila nenhum greeter. Se existir um `kyo-greeter` em `/usr/bin` ou `/usr/local/bin`, ele
+sincroniza a aparência com ele. Sem greeter, tudo funciona normalmente.
 
-## Credits
+## Contribuindo e dependências (Debian)
 
-Thank you to the [contributors](https://github.com/kyo-dev/kyo/graphs/contributors) and community
-members who test Kyo, report issues, share configurations, and help shape the project.
+Contribuição é bem-vinda, mas lembre que é um projeto pessoal e eu respondo quando der. Pra compilar na mão no
+Debian, estas são as dependências:
 
-## Donations
+```sh
+sudo apt install meson g++ just \
+  libwayland-dev wayland-protocols \
+  libegl-dev libgles-dev \
+  libfreetype-dev libfontconfig-dev \
+  libcairo2-dev libpango1.0-dev libharfbuzz-dev \
+  libxkbcommon-dev libglib2.0-dev \
+  libsecret-1-dev libsodium-dev \
+  libsdbus-c++-dev libpipewire-0.3-dev libwireplumber-0.5-dev \
+  libpam0g-dev libpolkit-agent-1-dev libpolkit-gobject-1-dev \
+  libcurl4-openssl-dev libwebp-dev libjxl-dev libsndfile1-dev librsvg2-dev \
+  libqalculate-dev libxml2-dev \
+  libmd4c-dev libtomlplusplus-dev libical-dev \
+  nlohmann-json3-dev libstb-dev \
+  libjemalloc-dev
+```
 
-Donations are appreciated but completely optional.
+Pra rodar, é bom ter também (nenhum é obrigatório pra compilar):
 
-<p>
-  <a href="https://www.buymeacoffee.com/kyo">
-    <img src="https://img.shields.io/badge/Buy_Me_a_Coffee-FFF59B?style=for-the-badge&logo=buymeacoffee&logoColor=070722&labelColor=FFF59B" alt="Buy Me a Coffee">
-  </a>
-  <a href="https://ko-fi.com/kyodev">
-    <img src="https://img.shields.io/badge/Ko--fi-FFF59B?style=for-the-badge&logo=kofi&logoColor=070722&labelColor=FFF59B" alt="Ko-fi">
-  </a>
-</p>
+```sh
+sudo apt install pipewire wireplumber gnome-keyring upower sway
+```
 
-## License
+Os comandos de compilação estão na seção [Instalação](#instalação).
 
-MIT License. See [LICENSE](LICENSE) for details.
+Pontos de atenção:
 
-## Packaging
+- O código é **C++23**, então precisa de GCC 13+ ou Clang 16+. O **Debian 13 (trixie)** já traz isso. No Debian 12
+  o compilador padrão é velho demais, veja a nota no [BUILDING.md](BUILDING.md).
+- As bibliotecas Luau, Wuffs e fzy já vêm junto no repositório, não precisa instalar.
+- Sem aceleração 3D (por exemplo, numa VM sem virgl), o Kyo cai em renderização por software e pode ficar lento.
+- Detalhes de arquitetura e estilo de código estão no [CONTRIBUTING.md](CONTRIBUTING.md) e no
+  [ARCHITECTURE.md](ARCHITECTURE.md), que vêm do projeto original.
 
-Distro packaging notes (description, deps, install layout, Meson options) live in
-[PACKAGING.md](PACKAGING.md).
+## Avisos
 
-## Star History
+- É um **fork não oficial**, sem nenhuma ligação com o Noctalia ou com os mantenedores dele.
+- **Não ofereço suporte.** Pode ser que não funcione no seu sistema, e não prometo responder issues ou dúvidas.
+- **Não garanto manter o projeto.** Vou tentar o máximo, mas ele pode ficar parado ou defasado em relação ao Noctalia.
+- Tudo é fornecido **"como está"**, sem garantia, nos termos da licença MIT. Use por sua conta e risco.
+- Se o problema não tem a ver com o visual do Kyo, o lugar certo é o projeto original.
 
-<p align="center">
-  <a href="https://github.com/kyo-dev/kyo/stargazers">
-    <img src="https://api.kyo.dev/stars" alt="Star History" />
-  </a>
-</p>
+## Créditos
+
+Quem fez o trabalho pesado foi o projeto **[Noctalia](https://github.com/noctalia-dev/noctalia)** e os
+contribuidores dele. O Kyo é só uma camada visual por cima. As bibliotecas e recursos usados estão no
+[CREDITS.md](CREDITS.md).
+
+## Licença
+
+MIT. Veja o [LICENSE](LICENSE). O aviso de copyright original do Noctalia foi mantido, como a licença exige.
