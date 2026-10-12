@@ -56,7 +56,7 @@ Gruvbox, Kanagawa, Nord, Rosé Pine e Tokyo-Night) continuam disponíveis. Os de
 ## Instalação
 
 > **Nota:** a instalação "oficial" deste projeto é feita por um **script separado, que mora em outro repositório
-> meu**: [`NOME-DO-REPOSITORIO`](https://github.com/kitsuioky/NOME-DO-REPOSITORIO). Ele é pensado pro Debian e
+> meu**: [`Noctalia-Install-Debian`](https://github.com/kitsuioky/Noctalia-Install-Debian.git). Ele é pensado pro Debian e
 > pergunta se você quer instalar o **Kyo** (este repositório) ou o **Noctalia original**. Ele é a forma recomendada
 > de instalar, mas o script não faz parte deste repositório.
 
